@@ -48,31 +48,32 @@
                 </div>
                 <!-- <img src="./images/mitchell-nijman-zMg3MHdMqi4-unsplash.jpg"> -->
             </div>
-            <form action="" class="form">
+            <form class="form" onsubmit="sendEmail(); reset();">
                 <h1 class="lg-heading">Contact Us</h1>
                 <p class="text-gray">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, adipisci?.</p>
                 <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" name="" id="username" required>
+                    <label for="name">Name</label>
+                    <input type="text" name="" id="name" placeholder="Your Name" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" name="" id="email" required>
+                    <input type="email" name="" id="email" placeholder="Email id" required>
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone</label>
-                    <input type="phone" name="" id="phone" required>
+                    <input type="phone" name="" id="phone" placeholder="Phone Number" required>
                 </div>
                 <div class="form-group">
                     <label for="phone">Message</label>
-                   <textarea name="" id="message">  </textarea>
+                   <textarea name="" id="message" placeholder="How can we help you">  </textarea>
                 </div>
-                <button type="submit" class="form-btn">Submit</button>
+                <button type="submit" class="form-btn" >Submit</button>
             </form>
         </div>
         </div>
     </section>
 </body>
-<script src=></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="./contact.js"></script>
 
 </html>
