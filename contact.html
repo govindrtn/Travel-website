@@ -14,7 +14,7 @@
 
     <nav class="navbar bg-dark">
         <div class="container">
-            <h1 class="logo lg-heading ">WORLD-TRAVEL..
+            <h1 class="logo lg-heading ">W-TRAVEL..
                 <p>Time-To-Travel....</p>
             </h1>
             <ul class="nav-items">
@@ -48,32 +48,67 @@
                 </div>
                 <!-- <img src="./images/mitchell-nijman-zMg3MHdMqi4-unsplash.jpg"> -->
             </div>
-            <form class="form" onsubmit="sendEmail(); reset();">
+            <form action="javascript:sendMail()" class="form" method="post">
                 <h1 class="lg-heading">Contact Us</h1>
-                <p class="text-gray">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, adipisci?.</p>
+                <p class="text-gray"></p>
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" name="" id="name" placeholder="Your Name" required>
+                    <input type="text" name="name" id="name" placeholder="Your Name" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" name="" id="email" placeholder="Email id" required>
+                    <input type="email" name="email" id="email" placeholder="Email id" required>
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone</label>
-                    <input type="phone" name="" id="phone" placeholder="Phone Number" required>
+                    <input type="phone" name="phone" id="phone" placeholder="Phone Number" required>
                 </div>
                 <div class="form-group">
                     <label for="phone">Message</label>
-                   <textarea name="" id="message" placeholder="How can we help you">  </textarea>
+                   <textarea name="message" id="message" placeholder="How can we help you">  </textarea>
                 </div>
-                <button type="submit" class="form-btn" >Submit</button>
+                <button type="submit"  class="form-btn" >Submit</button>
             </form>
         </div>
         </div>
     </section>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 <script src="https://smtpjs.com/v3/smtp.js"></script>
-<script src="./contact.js"></script>
+
+<!-- <script src="./contact.js"></script> -->
+<script>
+    function sendMail(){
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var phone = $("#phone").val();
+        var name = $("#message").val();
+
+
+        var body = 'name: '+name+'<br>email: '+email+'<br>phone: '+phone+'>br>message: '+message;
+    }
+
+
+    Email.send({
+        Host: "smtp.gmail.com",
+        Username: "arpitjha778@gmail.com",
+        Password: "Qazplm54321@",
+        To: 'govindmaithilrtn@gmail.com',
+        From: "arpitjha778@gmail.com",
+        Subject: "New Mail on Contact form from " + name,
+        Body: body
+    }).then(
+        message => {
+            if(message== "ok"){
+                alert("Thank You your mail has been sent ")
+            }
+            else{
+                alert("there is an error")
+            }
+        }
+    );
+
+</script>
 
 </html>

@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /* ##################################### HTML element stlying */
 html {
   font-size: 62.5%;
@@ -63,7 +64,7 @@ h3 {
 }
 .btn {
   display: inline-block;
-  padding: 0.5em 1.5em;
+  padding: 0.5em 1em;
   font-weight: 500;
   text-transform: uppercase;
   margin: 0.5rem 0;
@@ -101,7 +102,7 @@ h3 {
 .header {
   height: 95vh;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(./images/shreyas-sane-UPGPxiB6WkU-unsplash.jpg);
+    url(./images/header-image.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: repeat;
@@ -119,6 +120,7 @@ h3 {
 .navbar .logo p {
   margin-top: -10px;
   margin-left: 10px;
+  font-size: 25%;
 }
 
 .navbar .nav-items {
@@ -364,15 +366,18 @@ h3 {
 .cta-banner-right{
     width: 40%;
     float: right;
-    padding-left: 3rem;
+    /* padding-left: 3rem; */
+    margin-top: 0.2rem;
 }
 .btn-cta{
     text-align: center;
+    
     display: inline-block;
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     border: 2px solid white;
+    border-radius: 5px ;
     padding: 0.3rem;
     letter-spacing: 0.5rem;
 }
